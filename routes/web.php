@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomepageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/account/login');
 });
+
+Route::get('/account/login', [LoginController::class, 'loginPage']);
+Route::post('/account/login/send-request', [LoginController::class, 'handleLogin']);
+Route::get('/home/index', [HomepageController::class, 'getTerritories']);
