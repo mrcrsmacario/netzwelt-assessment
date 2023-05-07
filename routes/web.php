@@ -22,3 +22,4 @@ Route::get('/', function () {
 Route::get('/account/login', [LoginController::class, 'loginPage']);
 Route::post('/account/login/send-request', [LoginController::class, 'handleLogin']);
 Route::get('/home/index', [HomepageController::class, 'getTerritories']);
+Route::get('/home/index/get-territories', [HomepageController::class, 'requestTerritories']);

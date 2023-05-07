@@ -15,22 +15,12 @@ import { createApp } from 'vue';
 
 const app = createApp({});
 
+import TerritoriesComponent from './components/TerritoriesComponent.vue';
 import ExampleComponent from './components/ExampleComponent.vue';
+import SubTerritorriesComponent from './components/SubTerritorriesComponent.vue';
+app.component('territories-component', TerritoriesComponent);
 app.component('example-component', ExampleComponent);
-
-/**
- * Vue Routes
- */
-const routes = [
-    {
-        path: '/', component: ExampleComponent,
-        path: '/home/index', component: ExampleComponent,
-    }
-];
-const router = VueRoute.createRouter({
-    routes
-});
-app.use(router);
+app.component('subterritorries-component', SubTerritorriesComponent);
 
 /**
  * The following block of code may be used to automatically register your
