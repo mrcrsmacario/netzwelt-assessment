@@ -8,8 +8,10 @@
 </head>
 <body>
     <div id="app">
-        <router-view></router-view>
+        <territories-component/>
     </div>
-    <script src="{{ asset('js/app.js) }}"></script>
+
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
+
 </html>
